@@ -8,8 +8,9 @@ is supplied, the version number of the program will also be checked.
 
 NEW IN THIS VERSION
 
-Version 0.10.0: Wed Sep 15 2004
-- This is the initial release
+Version 0.10.1: Thu Sep 16 2004
+- Fixed broken dependency specification in Makefile.PL
+- Fixed auto-import of dependencies for this extension
 
 
 MODULE DEPENDENCIES

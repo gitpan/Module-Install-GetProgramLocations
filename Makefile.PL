@@ -10,14 +10,13 @@ version_from    ('lib/Module/Install/GetProgramLocations.pm');
 license         ('gpl');
 
 requires        (
-                  'File::Spec',
-                  'Cwd',
-                  'Sort::Versions',
-                  'Module::Install',
+                  'File::Spec' => 0,
+                  'Cwd' => 0,
+                  'Sort::Versions' => 0,
                 );
 
 include         ('ExtUtils/AutoInstall.pm');
-auto_install    ( -default => 0 );
+auto_install    ( );
 
 WriteAll();
 

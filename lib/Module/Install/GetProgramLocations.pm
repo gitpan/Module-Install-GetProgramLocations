@@ -14,7 +14,7 @@ use Module::Install::Base;
 
 @EXPORT = qw( &Get_GNU_Grep_Version &Get_Bzip2_Version );
 
-$VERSION = '0.10.0';
+$VERSION = '0.10.1';
 
 # ---------------------------------------------------------------------------
 
@@ -22,6 +22,13 @@ sub Get_Program_Locations
 {
   my $self = shift;
   my %info = %{ shift @_ };
+
+  # Module::Install says it requires perl 5.004
+  $self->requires( perl => '5.004' );
+  $self->include_deps('Config',0);
+  $self->include_deps('File::Spec',0);
+  $self->include_deps('Sort::Versions',0);
+  $self->include_deps('Cwd',0);
 
   # By default the programs have no paths
   my %programs = map { $_ => undef } keys %info;

@@ -1,4 +1,7 @@
-Version 0.10.0: Wed Sep 15 2004
+Version 0.10.1: Thu Sep 16 2004
+- Fixed broken dependency specification in Makefile.PL
+- Fixed auto-import of dependencies for this extension
 
+Version 0.10.0: Wed Sep 15 2004
 - Initial version, ported from Mail::Mbox::MessageParser's old Makefile.PL.
   Support for full path deduction and version checking.
