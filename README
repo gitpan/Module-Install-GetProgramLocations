@@ -8,7 +8,7 @@ is supplied, the version number of the program will also be checked.
 
 NEW IN THIS VERSION
 
-Version 0.2000: Tue Dec 21 EST 2004
+Version 0.2000: Tue Dec 21 2004
 - Fixed version numbers, which were incompatible with some modules.
 - Program locations are taken from %Config if they exist
 - Added some new version functions (GNU make and g++)

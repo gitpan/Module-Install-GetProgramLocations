@@ -1,4 +1,11 @@
-Version 0.2000:
+Version 0.3000: Sun Feb 6 2005
+- Changed the semantics of non-interactive mode so that it always converts
+  relative program names to absolute and validates them.
+- Removed Get_GNU_Grep_Version and others. (Just use Get_GNU_Version instead.)
+- Checks that the user provides an argname now.
+- Improved the documentation
+
+Version 0.2000: Tue Dec 21 2004
 - Fixed version numbers, which were incompatible with some modules. (Thanks to
   Tassilo von Parseval <tassilo.von.parseval@rwth-aachen.de> for the bug
   report)

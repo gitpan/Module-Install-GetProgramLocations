@@ -29,7 +29,7 @@ ok(!$gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 'Not in two ran
 
 {
   my %info = (
-    'TestProgram' => { versions => {
+    'TestProgram' => { types => {
                          'Test' => { fetch => \&Get_Test_Program_Version,
                                      numbers => '[1.2.3,)', },
                        },
@@ -44,7 +44,7 @@ ok(!$gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 'Not in two ran
 
 {
   my %info = (
-    'TestProgram' => { versions => {
+    'TestProgram' => { types => {
                          'Test' => { fetch => \&Get_Test_Program_Version,
                                      numbers => '[1.2.4,)', },
                        },
