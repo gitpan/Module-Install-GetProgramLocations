@@ -1,5 +1,5 @@
 name: Module-Install-GetProgramLocations
-version: 0.10.1
+version: 0.2000
 abstract: A Module::Install extension that allows
 author: David Coppit <david@coppit.org>
 license: gpl
@@ -11,4 +11,4 @@ requires:
 no_index:
   directory:
     - inc
-generated_by: Module::Install version 0.35
+generated_by: Module::Install version 0.36

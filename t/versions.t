@@ -7,32 +7,25 @@ my $gpls = new Module::Install::GetProgramLocations;
 ok(defined $gpls, 'Module::Install::GetProgramLocations creation');
 
 #2
-is($gpls->Version_Matches_Range('1.0.2', '[1.0,)'), 1,
-  'Greater than minimum');
+ok($gpls->Version_Matches_Range('1.0.2', '[1.0,)'), 'Greater than minimum');
 
 #3
-is($gpls->Version_Matches_Range('1.0.2', '(,1.4)'), 1,
-  'Less than maximum');
+ok($gpls->Version_Matches_Range('1.0.2', '(,1.4)'), 'Less than maximum');
 
 #4
-is($gpls->Version_Matches_Range('1.0.2', '(1.0.2,1.4)'), 0,
-  'Not equal boundary');
+ok(!$gpls->Version_Matches_Range('1.0.2', '(1.0.2,1.4)'), 'Not equal boundary');
 
 #5
-is($gpls->Version_Matches_Range('1.0.2', '[1.0.2,1.4)'), 1,
-  'Equal boundary');
+ok($gpls->Version_Matches_Range('1.0.2', '[1.0.2,1.4)'), 'Equal boundary');
 
 #6
-is($gpls->Version_Matches_Range('1.0.2', '[1.0,)'), 1,
-  'Greater than minimum subversion');
+ok($gpls->Version_Matches_Range('1.0.2', '[1.0,)'), 'Greater than minimum subversion');
 
 #7
-is($gpls->Version_Matches_Range('1.0.2', '[0.5,0.8] (1.0,1.4)'), 1,
-  'In second range');
+ok($gpls->Version_Matches_Range('1.0.2', '[0.5,0.8] (1.0,1.4)'), 'In second range');
 
 #8
-is($gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 0,
-  'Not in two ranges');
+ok(!$gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 'Not in two ranges');
 
 {
   my %info = (
@@ -44,8 +37,8 @@ is($gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 0,
   );
 
   # 9
-  is($gpls->Module::Install::GetProgramLocations::_Program_Version_Is_Valid(
-    'TestProgram','perl t/dummy_program.pl',\%info),1,
+  ok($gpls->Module::Install::GetProgramLocations::_Program_Version_Is_Valid(
+    'TestProgram','perl t/dummy_program.pl',\%info),
     'Check valid program version');
 }
 
@@ -59,8 +52,8 @@ is($gpls->Version_Matches_Range('1.9.2', '[1,1.7], [1.8,1.9]'), 0,
   );
 
   # 10
-  is($gpls->Module::Install::GetProgramLocations::_Program_Version_Is_Valid(
-    'TestProgram','perl t/dummy_program.pl',\%info),0,
+  ok(!$gpls->Module::Install::GetProgramLocations::_Program_Version_Is_Valid(
+    'TestProgram','perl t/dummy_program.pl',\%info),
     'Check invalid program version');
 }
 
