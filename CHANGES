@@ -1,0 +1,4 @@
+Version 0.10.0: Wed Sep 15 2004
+
+- Initial version, ported from Mail::Mbox::MessageParser's old Makefile.PL.
+  Support for full path deduction and version checking.
