@@ -1,14 +1,25 @@
-name: Module-Install-GetProgramLocations
-version: 0.3001
-abstract: A Module::Install extension that allows
-author: David Coppit <david@coppit.org>
-license: gpl
+---
+abstract: 'A Module::Install extension that allows the user to interactively specify the location of programs needed by the module to be installed'
+author:
+  - 'David Coppit <david@coppit.org>'
+build_requires:
+  IO::CaptureOutput: 0
+  Test::More: 0
 distribution_type: module
-requires:
-  File::Spec: 0
-  Cwd: 0
-  Sort::Versions: 0
+generated_by: 'Module::Install version 0.75'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
+module_name: Module::Install::GetProgramLocations
+name: Module-Install-GetProgramLocations
 no_index:
   directory:
     - inc
-generated_by: Module::Install version 0.36
+    - t
+requires:
+  Cwd: 0
+  File::Spec: 0
+  Sort::Versions: 0
+  perl: 5.004
+version: 0.3002
